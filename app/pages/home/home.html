@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Service worker test</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button (click)="apiCall()">Button</button>
+
+    <ion-list>
+        <ion-item *ngFor="let person of people | mapToIterable">
+            <ion-avatar item-left>
+                <img src="{{person.value.picture.thumbnail}}">
+            </ion-avatar>
+            <h2>{{person.value.name.first}} {{person.value.name.last}}</h2>
+            <p>{{person.value.email}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
